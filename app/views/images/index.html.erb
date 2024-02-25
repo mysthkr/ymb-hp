@@ -1,0 +1,10 @@
+<!-- app/views/images/index.html.erb -->
+<h1>Image Gallery</h1>
+<div>
+  <% @images.each do |image_path| %>
+    <% image_file = image_path.split('/').last %>
+    <div>
+      <%= image_tag("#{image_file}") %>
+    </div>
+  <% end %>
+</div>
